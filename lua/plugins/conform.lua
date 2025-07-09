@@ -3,6 +3,15 @@ return {
     'stevearc/conform.nvim',
     opts = {
       formatters = {
+        ['php-cs-fixer'] = {
+          command = 'php-cs-fixer',
+          args = {
+            'fix',
+            '--rules=@PSR12', -- Formatting preset. Other presets are available, see the php-cs-fixer docs.
+            '$FILENAME',
+          },
+          stdin = false,
+        },
         ['markdown-toc'] = {
           condition = function(_, ctx)
             for _, line in ipairs(vim.api.nvim_buf_get_lines(ctx.buf, 0, -1, false)) do
@@ -37,6 +46,7 @@ return {
         bash = { 'shfmt' },
         zig = { 'zig fmt' },
         ['markdown.mdx'] = { 'prettier', 'markdownlint-cli2', 'markdown-toc' },
+        php = { 'php-cs-fixer' },
       },
 
       format_on_save = {

@@ -1,6 +1,6 @@
 return {
   'mawkler/modicator.nvim',
-  dependencies = 'rose-pine/neovim', -- Add your colorscheme plugin here
+  event = 'VeryLazy',
   init = function()
     -- These are required for Modicator to work
     vim.o.cursorline = true

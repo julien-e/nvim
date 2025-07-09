@@ -72,3 +72,11 @@ map('n', 'g<C-a>', 'g<Plug>(dial-increment)', 'Dial: Increment with motion/text 
 map('n', 'g<C-x>', 'g<Plug>(dial-decrement)', 'Dial: Decrement with motion/text object')
 map('v', '<C-a>', '<Plug>(dial-increment)', 'Dial: Increment selected range')
 map('v', '<C-x>', '<Plug>(dial-decrement)', 'Dial: Decrement selected range')
+
+-- Telescope Mappings
+map('n', '<leader>td', 'o// TODO:', 'Add TODO comment')
+map('n', '<leader>tn', 'o// NOTE:', 'Add NOTE comment')
+map('n', '<leader>tf', 'o// FIX:', 'Add FIX comment')
+map('n', '<leader>tw', 'o// WARNING:', 'Add WARNING comment')
+map('n', '<leader>tk', 'o// HACK:', 'Add HACK comment')
+map('n', '<leader>tp', 'o// PERF:', 'Add PERF comment')
