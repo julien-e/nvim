@@ -2,7 +2,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "onenord_light",
+  theme = "aquarium",
 
   hl_override = {
     Comment = { italic = true },
