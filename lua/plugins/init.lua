@@ -102,6 +102,37 @@ return {
     opts = require "configs.treesitter",
   },
   {
+    "coder/claudecode.nvim",
+    dependencies = { "folke/snacks.nvim" },
+    config = true,
+    keys = {
+      { "<leader>ac",  nil,                              desc = "+claude" },
+      { "<leader>acc", "<cmd>ClaudeCode<cr>",            desc = "Toggle Claude" },
+      { "<leader>acf", "<cmd>ClaudeCodeFocus<cr>",       desc = "Focus Claude" },
+      { "<leader>acr", "<cmd>ClaudeCode --resume<cr>",   desc = "Resume Claude" },
+      { "<leader>acC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue last session" },
+      { "<leader>acb", "<cmd>ClaudeCodeAdd %<cr>",       desc = "Add current buffer" },
+      { "<leader>acs", "<cmd>ClaudeCodeSend<cr>", mode = "v", desc = "Send selection" },
+      { "<leader>aca", "<cmd>ClaudeCodeDiffAccept<cr>",  desc = "Accept diff" },
+      { "<leader>acd", "<cmd>ClaudeCodeDiffDeny<cr>",    desc = "Deny diff" },
+    },
+  },
+  {
+    "johnseth97/codex.nvim",
+    lazy = true,
+    keys = {
+      { "<leader>aC", function() require("codex").toggle() end, desc = "Toggle Codex" },
+    },
+    opts = {
+      keymaps    = { toggle = nil, quit = nil },
+      border     = "rounded",
+      width      = 0.85,
+      height     = 0.85,
+      autoinsert = true,
+      autoread   = true,
+    },
+  },
+  {
     "CopilotC-Nvim/CopilotChat.nvim",
     dependencies = {
       { "github/copilot.vim", lazy = false },
