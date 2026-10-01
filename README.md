@@ -138,7 +138,8 @@ In addition to NvChad's defaults, the following shortcuts have been added to fac
 | `<leader>acf` | Focus Claude Code. |
 | `<leader>acr` / `<leader>acC` | Resume a Claude session / continue the last one. |
 | `<leader>acb` | Add the current buffer to Claude's context. |
-| `<leader>acs` | (Visual Mode) Send the selection to Claude. |
+| `<leader>acs` | (Visual Mode) Send the selection to Claude. In Oil / Nvim-Tree: add the file(s) under the cursor. |
+| `<leader>acm` | Select the Claude model. |
 | `<leader>aca` / `<leader>acd` | Accept / deny a diff proposed by Claude. |
 | `-` | Toggle the Oil file explorer. |
 | `q` | Close Nvim-Tree |

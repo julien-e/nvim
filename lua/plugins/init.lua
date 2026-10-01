@@ -115,6 +115,13 @@ return {
       { "<leader>acC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue last session" },
       { "<leader>acb", "<cmd>ClaudeCodeAdd %<cr>",       desc = "Add current buffer" },
       { "<leader>acs", "<cmd>ClaudeCodeSend<cr>", mode = "v", desc = "Send selection" },
+      {
+        "<leader>acs",
+        "<cmd>ClaudeCodeTreeAdd<cr>",
+        desc = "Add file",
+        ft = { "NvimTree", "oil" },
+      },
+      { "<leader>acm", "<cmd>ClaudeCodeSelectModel<cr>", desc = "Select model" },
       { "<leader>aca", "<cmd>ClaudeCodeDiffAccept<cr>",  desc = "Accept diff" },
       { "<leader>acd", "<cmd>ClaudeCodeDiffDeny<cr>",    desc = "Deny diff" },
     },
