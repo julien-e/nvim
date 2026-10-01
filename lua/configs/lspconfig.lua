@@ -21,5 +21,7 @@ local servers = {
   "sourcekit",
   "templ",
   "gleam",
+  "intelephense",
+  "rust_analyzer",
 }
 vim.lsp.enable(servers)

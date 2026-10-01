@@ -174,6 +174,13 @@ return {
     end,
   },
   {
+    "mfussenegger/nvim-lint",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require "configs.lint"
+    end,
+  },
+  {
     "mrcjkb/haskell-tools.nvim",
     version = "^4",
     lazy = false,

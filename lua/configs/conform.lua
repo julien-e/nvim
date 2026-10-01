@@ -49,6 +49,7 @@ local options = {
     zig = { "zigfmt" },
     templ = { "templ" },
     haskell = { "fourmolu" },
+    php = { "prettier" },
     ["markdown.mdx"] = { "prettier", "markdownlint-cli2", "markdown-toc" },
   },
 
