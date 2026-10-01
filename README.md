@@ -78,8 +78,7 @@ The following plugins have been added to enhance the core functionality:
 
 | Plugin | Description |
 |---|---|
-| **[Copilot](https://github.com/github/copilot.vim)** | Integrates GitHub Copilot to provide AI-powered code completion. |
-| **[CopilotChat](https://github.com/CopilotC-Nvim/CopilotChat.nvim)** | Enables a chat interface to interact with GitHub Copilot directly within Neovim. |
+| **[claudecode.nvim](https://github.com/coder/claudecode.nvim)** | Integrates Claude Code into Neovim (terminal, buffer/selection context, diff review). |
 | **[oil.nvim](https://github.com/stevearc/oil.nvim)** | A file explorer that treats directories like editable buffers for seamless navigation and file operations. |
 | **[spectre.nvim](https://github.com/nvim-pack/nvim-spectre)** | A powerful project-wide search and replace tool. |
 | **[lazygit](https://github.com/folke/snacks.nvim/blob/main/docs/lazygit.md)** | Provides an integration for the [lazygit](https://github.com/jesseduffield/lazygit) terminal UI for a more intuitive Git workflow. |
@@ -135,14 +134,14 @@ In addition to NvChad's defaults, the following shortcuts have been added to fac
 | Shortcut | Action |
 | :--- | :--- |
 | `<leader>gg` | Launch the Lazygit interface. |
-| `<leader>aa` | Toggle the Copilot Chat panel. |
-| `<leader>aA` | Toggle Copilot completions on/off. |
-| `<c-y>` | Accept a Copilot completion suggestion or a diff |
+| `<leader>acc` | Toggle Claude Code. |
+| `<leader>acf` | Focus Claude Code. |
+| `<leader>acr` / `<leader>acC` | Resume a Claude session / continue the last one. |
+| `<leader>acb` | Add the current buffer to Claude's context. |
+| `<leader>acs` | (Visual Mode) Send the selection to Claude. |
+| `<leader>aca` / `<leader>acd` | Accept / deny a diff proposed by Claude. |
 | `-` | Toggle the Oil file explorer. |
-| `<leader>aq` | Quick Chat(Copilot). |
-| `<leader>ap` | Prompt actions (Copilot). |
-| `<leader>ax` | Clear chat (Copilot). |
-| `q` | Close the Copilot Chat panel in Normal Mode. Close Nvim-Tree |
+| `q` | Close Nvim-Tree |
 | `<leader>snl` | Show last message (Noice). |
 | `<leader>snh` | Show history (Noice). |
 | `<leader>sna` | Show all messages (Noice). |

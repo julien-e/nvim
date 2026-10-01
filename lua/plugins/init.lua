@@ -80,6 +80,7 @@ return {
     lazy = require("configs.render-markdown").lazy,
     cmd = require("configs.render-markdown").cmd,
     dependencies = require("configs.render-markdown").dependencies,
+    opts = {},
   },
   {
     "nvim-pack/nvim-spectre",
@@ -106,6 +107,7 @@ return {
     dependencies = { "folke/snacks.nvim" },
     config = true,
     keys = {
+      { "<leader>a",   "", desc = "+ai", mode = { "n", "v" } },
       { "<leader>ac",  nil,                              desc = "+claude" },
       { "<leader>acc", "<cmd>ClaudeCode<cr>",            desc = "Toggle Claude" },
       { "<leader>acf", "<cmd>ClaudeCodeFocus<cr>",       desc = "Focus Claude" },
@@ -116,35 +118,6 @@ return {
       { "<leader>aca", "<cmd>ClaudeCodeDiffAccept<cr>",  desc = "Accept diff" },
       { "<leader>acd", "<cmd>ClaudeCodeDiffDeny<cr>",    desc = "Deny diff" },
     },
-  },
-  {
-    "johnseth97/codex.nvim",
-    lazy = true,
-    keys = {
-      { "<leader>aC", function() require("codex").toggle() end, desc = "Toggle Codex" },
-    },
-    opts = {
-      keymaps    = { toggle = nil, quit = nil },
-      border     = "rounded",
-      width      = 0.85,
-      height     = 0.85,
-      autoinsert = true,
-      autoread   = true,
-    },
-  },
-  {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    dependencies = {
-      { "github/copilot.vim", lazy = false },
-      { "nvim-lua/plenary.nvim", branch = "master" },
-    },
-    build = "make tiktoken",
-    branch = "main",
-    lazy = false,
-    cmd = "CopilotChat",
-    opts = require("configs.copilot").opts,
-    config = require("configs.copilot").config,
-    keys = require("configs.copilot").keys,
   },
   {
     "lukas-reineke/indent-blankline.nvim",
